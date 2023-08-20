@@ -30,5 +30,14 @@ public class Cliente extends Pessoa {
     public void setTotalGastos(float totalGastos) {
         this.totalGastos = totalGastos;
     }
+
+    public void fazerPedido(Cliente cliente) {
+        Scanner scanner = new Scanner(System.in);
+        int id;
+
+        id = scanner.nextInt();
+
+        Restaurante.garcom.anotarPedido(id, cliente);
+    }
     
 }

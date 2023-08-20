@@ -24,4 +24,22 @@ public class Cardapio {
             System.out.println(comida.getId() + " - " + comida.getNome() + " - " + comida.getPreco() + "$");
         }
     }
+
+    public boolean isItemValido(int id) {
+        for (Comida comida :  listaDeComidas) {
+            if (comida.getId() == id) {
+            return true;
+            }
+        }
+        return false;
+    }
+
+    public float getPrecoPeloId (int id) {
+        for (Comida comida : listaDeComidas) {
+            if (comida.getId() == id) {
+                return comida.getPreco();
+            }
+        }
+        return 0;
+    }
 }

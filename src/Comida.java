@@ -9,7 +9,6 @@ public class Comida {
         this.id = id;
     }
 
-
     public int getId() {
         return this.id;
     }
@@ -17,7 +16,6 @@ public class Comida {
     public void setId(int id) {
         this.id = id;
     }
-
 
     public String getNome() {
         return this.nome;

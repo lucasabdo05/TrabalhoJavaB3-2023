@@ -33,6 +33,8 @@ public class Restaurante {
                     cardapio.imprimirCardapio();
                     break;
                 case 2:
+                    System.out.print(garcom.getNome() + ": O que você deseja? ");
+                    cliente.fazerPedido(cliente);
                     break;
                 case 3:
                     break;

@@ -28,4 +28,15 @@ public class Garcom extends Funcionario {
         this.gorjeta = gorjeta;
     }
     
+    public void anotarPedido(int id, Cliente cliente) {
+        if (Restaurante.cardapio.isItemValido(id)) {
+            System.out.println("Pedido anotado!");
+            float precoComida = Restaurante.cardapio.getPrecoPeloId(id);
+            float totalGastosAtual = cliente.getTotalGastos();
+            cliente.setTotalGastos(totalGastosAtual + precoComida);
+        } else {
+            System.out.println("Item não encontrado no cardápio.");
+        }
+    }
+
 }
