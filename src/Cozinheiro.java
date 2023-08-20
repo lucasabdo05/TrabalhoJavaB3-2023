@@ -6,6 +6,9 @@ public class Cozinheiro extends Funcionario {
         this.pratosPreparados = pratosPreparados;
     }
     
+    public Cozinheiro() {
+        
+    }
 
     public int getPratosPreparados() {
         return this.pratosPreparados;

@@ -9,6 +9,10 @@ public class Funcionario extends Pessoa {
         this.salario = salario;
     }
 
+    public Funcionario() {
+        
+    }
+
 
     public String getCargo() {
         return this.cargo;

@@ -8,6 +8,9 @@ public class Garcom extends Funcionario {
         this.gorjeta = gorjeta;
     }
 
+    public Garcom() {
+        
+    }
 
     public int getMesasAtendidas() {
         return this.mesasAtendidas;

@@ -9,6 +9,10 @@ public class Cliente extends Pessoa {
         this.totalGastos = totalGastos;
     }
 
+    public Cliente() {
+        
+    }
+
     public float getDinheiro() {
         return this.dinheiro;
     }

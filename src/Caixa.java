@@ -7,6 +7,9 @@ public class Caixa extends Funcionario {
         this.totalVendas = totalVendas;
     }
 
+    public Caixa() {
+        
+    }
 
     public int getTotalVendas() {
         return this.totalVendas;
@@ -15,5 +18,5 @@ public class Caixa extends Funcionario {
     public void setTotalVendas(int totalVendas) {
         this.totalVendas = totalVendas;
     }
-    
+
 }
