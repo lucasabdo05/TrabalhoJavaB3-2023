@@ -21,7 +21,30 @@ public class Restaurante {
 
         System.out.println(cliente.getNome() + ", aqui está um menu de ações.");
         do {
-            break;
+            System.out.println("Menu");
+            System.out.println("1 - Visualizar o cardápio.");
+            System.out.println("2 - Fazer pedido.");
+            System.out.println("4 - Comer.");
+            System.out.println("5 - Pagar.");
+            System.out.println("6 - Sair");
+            System.out.print("Opção: ");
+            opcao = scanner.nextInt();
+
+            switch(opcao) {
+                case 1:
+                    cardapio.imprimirCardapio();
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+            }
         } while(true);
     }
 }
