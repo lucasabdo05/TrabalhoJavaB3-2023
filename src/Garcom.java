@@ -9,7 +9,7 @@ public class Garcom extends Funcionario {
     }
 
     public Garcom() {
-        
+
     }
 
     public int getMesasAtendidas() {

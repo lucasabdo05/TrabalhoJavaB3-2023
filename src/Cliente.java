@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Cliente extends Pessoa {
     private float dinheiro;
     private float totalGastos;
@@ -10,7 +12,7 @@ public class Cliente extends Pessoa {
     }
 
     public Cliente() {
-        
+
     }
 
     public float getDinheiro() {
