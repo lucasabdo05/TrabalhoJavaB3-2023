@@ -19,27 +19,18 @@ public class Cardapio {
     }
 
     public void imprimirCardapio() {
-        System.out.println("Cardápio");
+        System.out.println("Cardápio:");
         for (Comida comida : listaDeComidas) {
             System.out.println(comida.getId() + " - " + comida.getNome() + " - " + comida.getPreco() + "$");
         }
     }
 
-    public boolean isItemValido(int id) {
-        for (Comida comida :  listaDeComidas) {
-            if (comida.getId() == id) {
-            return true;
-            }
-        }
-        return false;
-    }
-
-    public float getPrecoPeloId (int id) {
+    public Comida getComidaPeloId (int id) {
         for (Comida comida : listaDeComidas) {
             if (comida.getId() == id) {
-                return comida.getPreco();
+                return comida;
             }
         }
-        return 0;
+        return null;
     }
 }

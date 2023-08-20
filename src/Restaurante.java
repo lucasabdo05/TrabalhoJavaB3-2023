@@ -22,9 +22,10 @@ public class Restaurante {
             System.out.println("Menu");
             System.out.println("1 - Visualizar o cardápio.");
             System.out.println("2 - Fazer pedido.");
-            System.out.println("3 - Comer.");
-            System.out.println("4 - Pagar.");
-            System.out.println("5 - Sair");
+            System.out.println("3 - Visualizar a comanda.");
+            System.out.println("4 - Comer.");
+            System.out.println("5 - Pagar.");
+            System.out.println("6 - Sair");
             System.out.print("Opção: ");
             opcao = scanner.nextInt();
 
@@ -37,10 +38,13 @@ public class Restaurante {
                     cliente.fazerPedido(cliente);
                     break;
                 case 3:
+                    cliente.imprimirComanda();
                     break;
                 case 4:
                     break;
                 case 5:
+                    break;
+                case 6:
                     System.out.println("Até logo!");
                     scanner.close();
                     return;

@@ -29,13 +29,17 @@ public class Garcom extends Funcionario {
     }
     
     public void anotarPedido(int id, Cliente cliente) {
-        if (Restaurante.cardapio.isItemValido(id)) {
+        Comida comidaPedido = Restaurante.cardapio.getComidaPeloId(id);
+        if (comidaPedido != null) {
             System.out.println("Pedido anotado!");
-            float precoComida = Restaurante.cardapio.getPrecoPeloId(id);
+
+            float precoComida = comidaPedido.getPreco();
             float totalGastosAtual = cliente.getTotalGastos();
             cliente.setTotalGastos(totalGastosAtual + precoComida);
+
+            cliente.adicionarItemComanda(comidaPedido);
         } else {
-            System.out.println("Item não encontrado no cardápio.");
+            System.out.println("Item não encontrado.");
         }
     }
 
