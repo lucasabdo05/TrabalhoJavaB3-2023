@@ -28,4 +28,7 @@ public class Pessoa {
         this.idade = idade;
     }
     
+    public void comer() {
+        System.out.println(getNome() + " está comendo...");
+    }
 }

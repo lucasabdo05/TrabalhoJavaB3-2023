@@ -6,10 +6,10 @@ public class Cardapio {
 
     public Cardapio() {
         listaDeComidas = new ArrayList<>();
-        inicializarCardapio();
+        setCardapio();
     }
 
-    private void inicializarCardapio() {
+    private void setCardapio() {
         listaDeComidas.add(new Comida("Pizza", 70.0f, 1));
         listaDeComidas.add(new Comida("Cheeseburgur", 28.0f, 2));
         listaDeComidas.add(new Comida("Batata Frita", 10.0f, 3));
@@ -18,7 +18,7 @@ public class Cardapio {
         listaDeComidas.add(new Comida ("Água", 3.5f, 6));
     }
 
-    public void imprimirCardapio() {
+    public void getCardapio() {
         System.out.println("Cardápio:");
         for (Comida comida : listaDeComidas) {
             System.out.println(comida.getId() + " - " + comida.getNome() + " - " + comida.getPreco() + "$");

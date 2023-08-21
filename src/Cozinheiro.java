@@ -18,4 +18,9 @@ public class Cozinheiro extends Funcionario {
         this.pratosPreparados = pratosPreparados;
     }
 
+    public void cozinhar(Comida comida) {
+        System.out.println("O cozinheiro " + getNome() + " está preparando seu pedido: " + comida.getNome());
+        pratosPreparados += 1;
+    }
+
 }

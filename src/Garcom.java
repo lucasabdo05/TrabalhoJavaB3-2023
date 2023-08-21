@@ -33,14 +33,21 @@ public class Garcom extends Funcionario {
         if (comidaPedido != null) {
             System.out.println("Pedido anotado!");
 
+            mesasAtendidas += 1;
             float precoComida = comidaPedido.getPreco();
             float totalGastosAtual = cliente.getTotalGastos();
             cliente.setTotalGastos(totalGastosAtual + precoComida);
 
-            cliente.adicionarItemComanda(comidaPedido);
+            cliente.setComanda(comidaPedido);
+            notificarCozinheiro(comidaPedido);
+            cliente.setFezPedido(true);
         } else {
             System.out.println("Item não encontrado.");
         }
+    }
+
+    public void notificarCozinheiro(Comida comida) {
+        Restaurante.cozinheiro.cozinhar(comida);
     }
 
 }

@@ -31,23 +31,31 @@ public class Restaurante {
 
             switch(opcao) {
                 case 1:
-                    cardapio.imprimirCardapio();
+                    cardapio.getCardapio();
                     break;
                 case 2:
-                    System.out.print(garcom.getNome() + ": O que você deseja? ");
+                    System.out.print(garcom.getNome() + ": O que você deseja, "+ cliente.getNome()+ "? ");
                     cliente.fazerPedido(cliente);
                     break;
                 case 3:
-                    cliente.imprimirComanda();
+                    cliente.getComanda();
                     break;
                 case 4:
+                    cliente.comer();
                     break;
                 case 5:
+                    cliente.pagar();
                     break;
                 case 6:
-                    System.out.println("Até logo!");
-                    scanner.close();
-                    return;
+                    if (!cliente.isFezPedido() || (cliente.isFezPagamento() && cliente.isFezPagamento())) {
+                        System.out.println("Até logo!");
+                        scanner.close();
+                        return;
+                    } 
+                    else {
+                        System.out.println("Você precisa pagar antes de sair!");
+                        break;
+                    }
                 default:
                     System.out.println("Opção inválida.");
             }
